@@ -1,1085 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>IRONFIT GYM | Ghaziabad</title>
-
-<meta name="description" content="IRONFIT GYM Ghaziabad - Train Different. Build Strength. Become Stronger.">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#08090b;
-  color:#fff;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-.container{
-  width:92%;
-  max-width:1150px;
-  margin:auto;
-}
-
-/* NAVBAR */
-
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index:1000;
-  background:rgba(8,9,11,.88);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid #25272d;
-}
-
-.nav{
-  height:75px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  font-size:32px;
-  font-weight:900;
-  letter-spacing:2px;
-}
-
-.logo span{
-  color:#ff3150;
-}
-
-.nav-links{
-  display:flex;
-  gap:25px;
-  list-style:none;
-}
-
-.nav-links a{
-  font-size:14px;
-  font-weight:bold;
-  color:#ddd;
-}
-
-.nav-links a:hover{
-  color:#ff3150;
-}
-
-.menu{
-  display:none;
-  font-size:28px;
-}
-
-/* HERO */
-
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  position:relative;
-  background:
-  linear-gradient(90deg,rgba(8,9,11,.97),rgba(8,9,11,.65),rgba(8,9,11,.25)),
-  url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85")
-  center/cover;
-}
-
-.hero-content{
-  padding-top:70px;
-}
-
-.tag{
-  display:inline-block;
-  padding:8px 15px;
-  border:1px solid #ff3150;
-  border-radius:30px;
-  color:#ff3150;
-  font-size:11px;
-  font-weight:bold;
-  letter-spacing:2px;
-  margin-bottom:22px;
-}
-
-.hero h1{
-  font-size:clamp(65px,12vw,145px);
-  line-height:.82;
-  text-transform:uppercase;
-  font-weight:900;
-  letter-spacing:-4px;
-}
-
-.hero h1 span{
-  color:transparent;
-  -webkit-text-stroke:2px #fff;
-}
-
-.hero p{
-  max-width:580px;
-  color:#c4c6ca;
-  line-height:1.8;
-  margin:28px 0;
-}
-
-.buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  display:inline-block;
-  padding:15px 25px;
-  border-radius:6px;
-  font-size:13px;
-  font-weight:bold;
-  border:none;
-  cursor:pointer;
-}
-
-.btn-primary{
-  background:#ff3150;
-  color:#fff;
-}
-
-.btn-primary:hover{
-  background:#e92241;
-}
-
-.btn-outline{
-  border:1px solid #555;
-  background:rgba(255,255,255,.04);
-}
-
-.btn-outline:hover{
-  border-color:#ff3150;
-  color:#ff3150;
-}
-
-/* STATS */
-
-.stats{
-  background:#ff3150;
-}
-
-.stats-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  padding:25px 0;
-}
-
-.stat{
-  text-align:center;
-  border-right:1px solid rgba(255,255,255,.3);
-}
-
-.stat:last-child{
-  border:0;
-}
-
-.stat h3{
-  font-size:28px;
-}
-
-.stat p{
-  font-size:10px;
-  text-transform:uppercase;
-  margin-top:4px;
-}
-
-/* GENERAL */
-
-section{
-  padding:90px 0;
-}
-
-.section-head{
-  margin-bottom:45px;
-}
-
-.section-head small{
-  color:#ff3150;
-  font-size:11px;
-  font-weight:bold;
-  letter-spacing:3px;
-}
-
-.section-head h2{
-  font-size:58px;
-  margin-top:8px;
-  text-transform:uppercase;
-}
-
-.section-head p{
-  color:#999;
-  max-width:600px;
-  line-height:1.7;
-  margin-top:12px;
-}
-
-/* ABOUT */
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:55px;
-  align-items:center;
-}
-
-.about-img{
-  height:520px;
-  border-radius:8px;
-  background:
-  linear-gradient(transparent 40%,rgba(0,0,0,.75)),
-  url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=85")
-  center/cover;
-}
-
-.about-text h2{
-  font-size:60px;
-  line-height:.9;
-  text-transform:uppercase;
-}
-
-.about-text h2 span{
-  color:#ff3150;
-}
-
-.about-text p{
-  color:#999;
-  line-height:1.8;
-  margin:25px 0;
-}
-
-.points{
-  display:grid;
-  gap:12px;
-  margin-bottom:25px;
-}
-
-.points div{
-  padding:14px;
-  background:#121419;
-  border-left:3px solid #ff3150;
-}
-
-.owner{
-  margin:20px 0;
-  padding:15px;
-  background:#121419;
-  border-left:3px solid #ff8a3d;
-}
-
-.owner strong{
-  display:block;
-  color:#ff8a3d;
-  font-size:11px;
-  letter-spacing:2px;
-  margin-bottom:5px;
-}
-
-/* SERVICES */
-
-.services{
-  background:#111318;
-}
-
-.service-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.service{
-  background:#171920;
-  border:1px solid #272a31;
-  padding:30px;
-  min-height:210px;
-  transition:.3s;
-}
-
-.service:hover{
-  transform:translateY(-7px);
-  border-color:#ff3150;
-}
-
-.icon{
-  font-size:35px;
-  margin-bottom:18px;
-}
-
-.service h3{
-  font-size:25px;
-  text-transform:uppercase;
-}
-
-.service p{
-  color:#999;
-  line-height:1.7;
-  margin-top:10px;
-  font-size:14px;
-}
-
-/* MEMBERSHIP */
-
-.memberships{
-  background:#0d0f12;
-}
-
-.price-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-
-.price-card{
-  background:#171920;
-  border:1px solid #292c33;
-  padding:30px;
-  border-radius:7px;
-}
-
-.price-card.featured{
-  border-color:#ff3150;
-  transform:scale(1.03);
-}
-
-.popular{
-  display:inline-block;
-  background:#ff3150;
-  padding:5px 9px;
-  border-radius:20px;
-  font-size:9px;
-  font-weight:bold;
-  margin-bottom:12px;
-}
-
-.price-card h3{
-  font-size:28px;
-  text-transform:uppercase;
-}
-
-.price{
-  font-size:48px;
-  font-weight:900;
-  margin:18px 0;
-}
-
-.price span{
-  font-size:11px;
-  color:#999;
-}
-
-.features{
-  list-style:none;
-  display:grid;
-  gap:12px;
-  color:#bbb;
-  font-size:13px;
-  margin:20px 0 25px;
-}
-
-.features li:before{
-  content:"✓";
-  color:#ff3150;
-  margin-right:9px;
-  font-weight:bold;
-}
-
-/* GALLERY */
-
-.gallery{
-  display:grid;
-  grid-template-columns:1.2fr .8fr .9fr;
-  grid-auto-rows:220px;
-  gap:13px;
-}
-
-.gallery div{
-  border-radius:7px;
-  background-size:cover;
-  background-position:center;
-}
-
-.g1{
-  grid-row:span 2;
-  background-image:url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=85");
-}
-
-.g2{
-  background-image:url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=85");
-}
-
-.g3{
-  background-image:url("https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=85");
-}
-
-.g4{
-  background-image:url("https://images.unsplash.com/photo-1584467735871-299aa9a397c3?auto=format&fit=crop&w=800&q=85");
-}
-
-.g5{
-  background-image:url("https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=85");
-}
-
-/* CTA */
-
-.cta{
-  margin-top:80px;
-  padding:75px 25px;
-  text-align:center;
-  border:1px solid #292c33;
-  border-radius:8px;
-  background:
-  linear-gradient(rgba(8,9,11,.72),rgba(8,9,11,.88)),
-  url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=85")
-  center/cover;
-}
-
-.cta h2{
-  font-size:60px;
-  text-transform:uppercase;
-}
-
-.cta p{
-  color:#bbb;
-  max-width:550px;
-  line-height:1.7;
-  margin:15px auto 25px;
-}
-
-/* CONTACT */
-
-.contact{
-  background:#111318;
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-}
-
-.contact-info h2{
-  font-size:60px;
-  line-height:.9;
-  text-transform:uppercase;
-  margin-top:10px;
-}
-
-.contact-info h2 span{
-  color:#ff3150;
-}
-
-.contact-info>p{
-  color:#999;
-  line-height:1.7;
-  margin:20px 0;
-}
-
-.contact-item{
-  margin:17px 0;
-}
-
-.contact-item strong{
-  display:block;
-  color:#ff3150;
-  font-size:10px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:5px;
-}
-
-.contact-item span{
-  color:#ddd;
-  font-size:14px;
-}
-
-form{
-  background:#171920;
-  padding:28px;
-  border:1px solid #292c33;
-}
-
-input,textarea{
-  width:100%;
-  background:#0b0d10;
-  border:1px solid #292c33;
-  color:white;
-  padding:14px;
-  margin-bottom:12px;
-  border-radius:5px;
-  outline:none;
-}
-
-input:focus,textarea:focus{
-  border-color:#ff3150;
-}
-
-textarea{
-  height:120px;
-  resize:none;
-}
-
-/* FOOTER */
-
-footer{
-  padding:28px 0;
-  text-align:center;
-  border-top:1px solid #25272d;
-  color:#777;
-  font-size:12px;
-}
-
-footer strong{
-  color:#ff3150;
-}
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:75px;
-    left:0;
-    width:100%;
-    background:#0b0d10;
-    flex-direction:column;
-    padding:22px;
-  }
-
-  .nav-links.active{
-    display:flex;
-  }
-
-  .menu{
-    display:block;
-  }
-
-  .stats-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-  }
-
-  .stat{
-    border:0;
-  }
-
-  section{
-    padding:70px 0;
-  }
-
-  .about-grid,
-  .service-grid,
-  .price-grid,
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .price-card.featured{
-    transform:none;
-  }
-
-  .about-img{
-    height:380px;
-  }
-
-  .gallery{
-    grid-template-columns:1fr 1fr;
-    grid-auto-rows:180px;
-  }
-
-  .g1{
-    grid-column:span 2;
-    grid-row:span 1;
-  }
-
-  .hero h1{
-    font-size:70px;
-  }
-
-  .section-head h2,
-  .about-text h2,
-  .contact-info h2,
-  .cta h2{
-    font-size:48px;
-  }
-}
-
-@media(max-width:450px){
-
-  .hero h1{
-    font-size:60px;
-  }
-
-  .gallery{
-    grid-template-columns:1fr;
-  }
-
-  .g1{
-    grid-column:auto;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="container nav">
-
-<a href="#home" class="logo">
-IRON<span>FIT</span>
-</a>
-
-<ul class="nav-links" id="navLinks">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#membership">Membership</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-<div class="menu" onclick="toggleMenu()">☰</div>
-
-</div>
-</header>
-
-
-<section class="hero" id="home">
-
-<div class="container hero-content">
-
-<div class="tag">
-GHAZIABAD • TRAIN • MOVE • GROW
-</div>
-
-<h1>
-BUILT<br>
-<span>TO BE</span><br>
-STRONG
-</h1>
-
-<p>
-Welcome to IRONFIT GYM — a modern training space in Ghaziabad
-for people who want to train consistently, build strength and
-become healthier and more confident.
-</p>
-
-<div class="buttons">
-
-<a href="#membership" class="btn btn-primary">
-JOIN IRONFIT
-</a>
-
-<a href="tel:9536355920" class="btn btn-outline">
-CALL NOW
-</a>
-
-</div>
-
-</div>
-</section>
-
-
-<div class="stats">
-
-<div class="container stats-grid">
-
-<div class="stat">
-<h3>IRONFIT</h3>
-<p>Gym</p>
-</div>
-
-<div class="stat">
-<h3>7 DAYS</h3>
-<p>Training</p>
-</div>
-
-<div class="stat">
-<h3>GHAZIABAD</h3>
-<p>Location</p>
-</div>
-
-<div class="stat">
-<h3>100%</h3>
-<p>Energy</p>
-</div>
-
-</div>
-</div>
-
-
-<section id="about">
-
-<div class="container about-grid">
-
-<div class="about-img"></div>
-
-<div class="about-text">
-
-<small>ABOUT IRONFIT</small>
-
-<h2>
-MORE THAN<br>
-A <span>GYM.</span>
-</h2>
-
-<p>
-IRONFIT is built around a simple idea: make training focused,
-motivating and enjoyable. Whether you're beginning your fitness
-journey or working on your strength, our space is here to support
-consistent progress.
-</p>
-
-<div class="points">
-<div>✓ Modern training equipment</div>
-<div>✓ Clean and energetic environment</div>
-<div>✓ Friendly fitness community</div>
-<div>✓ Training for different experience levels</div>
-</div>
-
-<div class="owner">
-<strong>Founder & Owner</strong>
+Create a premium, futuristic 3D gym website for a brand called "IRONFIT GYM".
+
+IMPORTANT:
+The website must feel like a high-end cinematic 3D website, inspired by modern 3D product showcase websites, but do NOT copy any existing website.
+
+BRAND:
+Name: IRONFIT GYM
+Founder & Owner: Tanik Baboo
+Location: Ghaziabad, Uttar Pradesh, India
+Phone: 9536355920
+Email: tanikbaboo@gmail.com
+
+DESIGN STYLE:
+- Premium dark cinematic theme
+- Main background: deep black / charcoal
+- Primary accent: electric crimson red
+- Secondary accent: fiery orange
+- Metallic silver/white typography
+- Strong 3D depth and realistic shadows
+- Glassmorphism panels
+- Neon red/orange glow
+- Futuristic but professional
+- Clean, spacious layout
+- No cheap-looking gradients or cartoon graphics
+
+HERO SECTION:
+Create a spectacular full-screen 3D hero section.
+
+Show:
+IRONFIT
+GYM
+
+Headline:
+"BUILT TO BE STRONG"
+
+Subheading:
+"Train Different. Move Better. Become Stronger."
+
+Add a large realistic 3D gym object in the center, such as a metallic dumbbell, barbell, or weight plate.
+
+The 3D object should:
+- Slowly rotate
+- Have realistic metallic reflections
+- Cast a soft shadow
+- Have subtle red/orange neon lighting
+- React slightly to mouse movement
+- Move smoothly when scrolling
+
+Add two buttons:
+"JOIN IRONFIT"
+"CALL NOW"
+
+CALL NOW must link to:
+tel:9536355920
+
+3D EFFECTS:
+- Parallax scrolling
+- Floating 3D elements
+- Smooth camera-like movement
+- Depth-of-field effect
+- Soft particles
+- Glow effects
+- 3D card tilt on mouse hover
+- Smooth section transitions
+- Subtle entrance animations
+- No excessive animation that makes the site slow
+
+NAVIGATION:
+Create a transparent glass navigation bar.
+
+Logo:
+IRONFIT
+
+Navigation:
+HOME
+ABOUT
+SERVICES
+MEMBERSHIP
+GALLERY
+CONTACT
+
+ABOUT SECTION:
+Create a cinematic section titled:
+
+"MORE THAN A GYM."
+
+Explain that IRONFIT is a modern training space in Ghaziabad focused on consistent, healthy fitness and strength training.
+
+Show a large gym image with a 3D floating information card.
+
+Add:
+Founder & Owner
 Tanik Baboo
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section class="services" id="services">
-
-<div class="container">
-
-<div class="section-head">
-<small>WHAT WE OFFER</small>
-<h2>TRAIN DIFFERENT</h2>
-<p>
-Everything you need for a balanced and consistent fitness routine.
-</p>
-</div>
-
-<div class="service-grid">
-
-<div class="service">
-<div class="icon">🏋️</div>
-<h3>Strength Training</h3>
-<p>
-Train with a variety of equipment and structured options
-to develop practical strength.
-</p>
-</div>
-
-<div class="service">
-<div class="icon">⚡</div>
-<h3>Functional Fitness</h3>
-<p>
-Movement-focused training to support coordination,
-fitness and everyday performance.
-</p>
-</div>
-
-<div class="service">
-<div class="icon">🔥</div>
-<h3>Cardio Zone</h3>
-<p>
-Dedicated cardio equipment to help you stay active
-and improve endurance.
-</p>
-</div>
-
-<div class="service">
-<div class="icon">🎯</div>
-<h3>Personal Training</h3>
-<p>
-Guidance and support to make your training more focused
-and consistent.
-</p>
-</div>
-
-<div class="service">
-<div class="icon">🥊</div>
-<h3>Conditioning</h3>
-<p>
-Varied workouts designed to develop stamina,
-coordination and overall fitness.
-</p>
-</div>
-
-<div class="service">
-<div class="icon">🧘</div>
-<h3>Mobility</h3>
-<p>
-Mobility-focused movement to support comfortable
-and effective training.
-</p>
-</div>
 
-</div>
-</div>
-</section>
-
-
-<section class="memberships" id="membership">
-
-<div class="container">
-
-<div class="section-head">
-<small>MEMBERSHIP</small>
-<h2>CHOOSE YOUR PLAN</h2>
-<p>
-Simple membership options for your fitness journey.
-</p>
-</div>
-
-<div class="price-grid">
-
-<div class="price-card">
-
-<h3>Basic</h3>
-
-<div class="price">
-₹999 <span>/ month</span>
-</div>
+SERVICES:
+Create premium 3D glass cards for:
+
+Strength Training
+Functional Fitness
+Cardio
+Personal Training
+Conditioning
+Mobility
+
+Cards should tilt slightly in 3D when hovered.
+
+MEMBERSHIP:
+Create three futuristic 3D pricing cards:
+
+BASIC
+₹999 / month
+
+PRO
+₹1499 / month
+
+PREMIUM
+₹1999 / month
+
+Make PRO the highlighted plan.
+
+Each card should have:
+- 3D hover effect
+- Glass background
+- Red/orange glow
+- Smooth animation
+- Clear CTA button
+
+GALLERY:
+Create a cinematic gym gallery with large high-quality gym images.
+
+Use an asymmetric layout with:
+- Large main image
+- Smaller floating images
+- Rounded corners
+- Depth shadows
+- Hover zoom
+- 3D movement
+
+CONTACT:
+Create a premium contact section.
+
+Display:
+
+IRONFIT GYM
+Ghaziabad, Uttar Pradesh
+
+Phone:
+9536355920
+
+Email:
+tanikbaboo@gmail.com
+
+Founder & Owner:
+Tanik Baboo
+
+Add:
+"CALL IRONFIT"
+
+button linked to:
+tel:9536355920
+
+Also add a contact form with:
+Name
+Phone
+Email
+Message
+
+FOOTER:
+IRONFIT GYM
+Ghaziabad
+Founder & Owner: Tanik Baboo
+
+TECHNICAL REQUIREMENTS:
+- Build the complete website in a single index.html file.
+- Use HTML, CSS and JavaScript.
+- It must work on GitHub Pages.
+- Do not require a backend.
+- Make it fully responsive.
+- It must look excellent on Android/mobile screens.
+- Use Three.js from CDN if needed for real 3D objects.
+- Use CSS 3D transforms where possible.
+- Optimize images and animations for mobile performance.
+- Include smooth scrolling.
+- Include a mobile hamburger menu.
+- Make all buttons functional.
+- Use semantic HTML.
+- Add SEO title and meta description.
+- Do not use copyrighted logos or copied website content.
+
+FINAL VISUAL GOAL:
+The first screen should immediately look like a premium futuristic 3D fitness brand.
+
+The user should feel:
+"THIS IS NOT A NORMAL GYM WEBSITE — THIS LOOKS LIKE A PREMIUM 3D BRAND EXPERIENCE."
 
-<ul class="features">
-<li>Gym access</li>
-<li>Cardio area</li>
-<li>Strength equipment</li>
-<li>Locker access</li>
-</ul>
-
-<a href="tel:9536355920" class="btn btn-outline">
-ENQUIRE
-</a>
-
-</div>
-
-
-<div class="price-card featured">
-
-<div class="popular">
-POPULAR
-</div>
-
-<h3>Pro</h3>
-
-<div class="price">
-₹1499 <span>/ month</span>
-</div>
-
-<ul class="features">
-<li>Everything in Basic</li>
-<li>Training guidance</li>
-<li>Functional fitness zone</li>
-<li>Priority support</li>
-</ul>
-
-<a href="tel:9536355920" class="btn btn-primary">
-ENQUIRE
-</a>
-
-</div>
-
-
-<div class="price-card">
-
-<h3>Premium</h3>
-
-<div class="price">
-₹1999 <span>/ month</span>
-</div>
-
-<ul class="features">
-<li>Everything in Pro</li>
-<li>Personal training support</li>
-<li>Fitness assessment</li>
-<li>Premium access</li>
-</ul>
-
-<a href="tel:9536355920" class="btn btn-outline">
-ENQUIRE
-</a>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section id="gallery">
-
-<div class="container">
-
-<div class="section-head">
-<small>IRONFIT LIFE</small>
-<h2>THE GRIND</h2>
-<p>
-A glimpse of the IRONFIT training atmosphere.
-</p>
-</div>
-
-<div class="gallery">
-<div class="g1"></div>
-<div class="g2"></div>
-<div class="g3"></div>
-<div class="g4"></div>
-<div class="g5"></div>
-</div>
-
-<div class="cta">
-
-<h2>READY TO TRAIN?</h2>
-
-<p>
-Your next chapter starts with one decision.
-Step inside IRONFIT and make training part of your journey.
-</p>
-
-<a href="tel:9536355920" class="btn btn-primary">
-CALL 9536355920
-</a>
-
-</div>
-
-</div>
-</section>
-
-
-<section class="contact" id="contact">
-
-<div class="container contact-grid">
-
-<div class="contact-info">
-
-<small>GET IN TOUCH</small>
-
-<h2>
-LET'S<br>
-<span>CONNECT.</span>
-</h2>
-
-<p>
-Have questions about membership or want to visit IRONFIT?
-Contact us directly.
-</p>
-
-<div class="contact-item">
-<strong>📍 Area</strong>
-<span>Ghaziabad, Uttar Pradesh</span>
-</div>
-
-<div class="contact-item">
-<strong>📞 Phone</strong>
-<span>9536355920</span>
-</div>
-
-<div class="contact-item">
-<strong>✉ Email</strong>
-<span>tanikbaboo@gmail.com</span>
-</div>
-
-<div class="contact-item">
-<strong>👤 Owner</strong>
-<span>Tanik Baboo</span>
-</div>
-
-</div>
-
-
-<form onsubmit="sendMessage(event)">
-
-<input
-type="text"
-id="name"
-placeholder="Your Name"
-required
->
-
-<input
-type="tel"
-id="phone"
-placeholder="Phone Number"
-required
->
-
-<input
-type="email"
-id="email"
-placeholder="Email Address"
-required
->
-
-<textarea
-id="message"
-placeholder="Your Message"
-required
-></textarea>
-
-<button class="btn btn-primary" type="submit">
-SEND MESSAGE
-</button>
-
-</form>
-
-</div>
-</section>
-
-
-<footer>
-
-© 2026 <strong>IRONFIT GYM</strong>
-• Ghaziabad
-• Founder & Owner: Tanik Baboo
-
-</footer>
-
-
-<script>
-
-function toggleMenu(){
-document.getElementById("navLinks").classList.toggle("active");
-}
-
-document.querySelectorAll(".nav-links a").forEach(function(link){
-link.addEventListener("click",function(){
-document.getElementById("navLinks").classList.remove("active");
-});
-});
-
-function sendMessage(event){
-
-event.preventDefault();
-
-const name=document.getElementById("name").value;
-
-alert(
-"Thank you "+name+
-"! Please call IRONFIT at 9536355920 to complete your enquiry."
-);
-
-}
-
-</script>
-
-</body>
-    </html>
+Make the design unique to IRONFIT GYM.
                 
